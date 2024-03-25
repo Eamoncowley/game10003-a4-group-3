@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.8.34511.84
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp1", "ConsoleApp1.csproj", "{B6CDEE30-1300-4707-B1B4-5C8C45A409A0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeGame", "MazeGame.csproj", "{184FEC9A-14F8-4D4E-B263-06E9C409124E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B6CDEE30-1300-4707-B1B4-5C8C45A409A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B6CDEE30-1300-4707-B1B4-5C8C45A409A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B6CDEE30-1300-4707-B1B4-5C8C45A409A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B6CDEE30-1300-4707-B1B4-5C8C45A409A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{184FEC9A-14F8-4D4E-B263-06E9C409124E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{184FEC9A-14F8-4D4E-B263-06E9C409124E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{184FEC9A-14F8-4D4E-B263-06E9C409124E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{184FEC9A-14F8-4D4E-B263-06E9C409124E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {1A5579D1-921C-4346-8328-B02CF2BA27A3}
+		SolutionGuid = {CB54A7BB-EB08-4CD9-9EEE-63459C427F97}
 	EndGlobalSection
 EndGlobal
