@@ -1,4 +1,6 @@
-﻿using Raylib_cs;
+﻿// Created by Jonah, Makayla, Eamon, Sudhan and Param
+
+using Raylib_cs;
 using System;
 using System.Diagnostics;
 using System.Numerics;
