@@ -63,9 +63,14 @@ namespace ConsoleApp1
                 drawLevelThree();
             }
         }
+        static void drawBoat()
+        {
+            Raylib.DrawRectangle(50, 50, 50, 50, Color.White);
+        }
 
         static void drawLevelOne()
         {
+            drawBoat();
             currentX = startX;
             currentY = startY;
             goDown();
