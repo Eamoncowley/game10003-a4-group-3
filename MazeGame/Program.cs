@@ -3,6 +3,7 @@
 using Raylib_cs;
 using System;
 using System.Diagnostics;
+//using System.Drawing;
 using System.Numerics;
 
 namespace ConsoleApp1
@@ -14,7 +15,7 @@ namespace ConsoleApp1
         const string title = "Maze game created for Mohawk College";
         const int width = 800;
         const int height = 800;
-        
+
         // Setup drawing
         public static int startY = 0;
         public static int startX = 400;
@@ -129,7 +130,7 @@ namespace ConsoleApp1
         {
             while (true) // Go right with path
             {
-                
+
                 currentX = currentX + a;
                 currentTile++;
                 if (currentTile > numOfTilesToMove)
@@ -137,7 +138,7 @@ namespace ConsoleApp1
                     currentTile = 0;
                     a = 0;
                     break;
-                    
+
                 }
                 a = +50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
