@@ -8,7 +8,7 @@ namespace ConsoleApp1
 
     internal class Program
     {
-        const string title = "Basic Raylib Demo";
+        const string title = "Maze game created for Mohawk College";
         const int width = 800;
         const int height = 800;
         
@@ -50,7 +50,6 @@ namespace ConsoleApp1
         {
             currentX = startX;
             currentY = startY;
-            //drawStart();
             goRight();
             drawStart();
             goDown();
@@ -67,14 +66,12 @@ namespace ConsoleApp1
             goLeft();
             goLeft();
             goLeft();
-            //drawStart();
             drawEnd();
         }
         static void drawLevelThree()
         {
             currentX = startX;
             currentY = startY;
-            //drawStart();
             goRight();
             drawStart();
             goDown();
@@ -91,7 +88,6 @@ namespace ConsoleApp1
             goDown();
             goRight();
             goUp();
-            //drawStart();
             drawEnd();
         }
         static void drawStart()
