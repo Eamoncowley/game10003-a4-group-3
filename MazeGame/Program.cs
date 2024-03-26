@@ -8,6 +8,9 @@ using System.Numerics;
 
 namespace ConsoleApp1
 {
+    //2D Textures/ Images
+    public Texture2D drawBoat;
+    public Texture2D waterPath;
 
     internal class Program
     {
@@ -29,6 +32,12 @@ namespace ConsoleApp1
         public static bool gameOneCompleted = false;
         public static bool gameTwoCompleted = false;
         public static bool gameThreeCompleted = false;
+
+        //Adding Images
+        Raylib.LoadTextureFromImage("Boat.png");
+        Texture2D drawBoat = Raylib.LoadImage("../../../../Assets/Boat.png");
+        Raylib.LoadTextureFromImage("Water.png");
+        Texture2D waterPath = Raylib.LoadImage("../../../../Assets/Water.png");
 
         static void Main(string[] args)
         {
@@ -63,14 +72,17 @@ namespace ConsoleApp1
                 drawLevelThree();
             }
         }
+        //Boat for moving object on path/water
         static void drawBoat()
         {
-            Raylib.DrawRectangle(50, 50, 50, 50, Color.White);
+            Raylib.DrawTexturePro(Texture2D drawBoat,);
         }
 
         static void drawLevelOne()
         {
+            //Calling Boat image
             drawBoat();
+
             currentX = startX;
             currentY = startY;
             goDown();
@@ -81,6 +93,9 @@ namespace ConsoleApp1
         }
         static void drawLevelTwo()
         {
+            //Calling Boat image
+            drawBoat();
+
             currentX = startX;
             currentY = startY;
             goRight();
@@ -103,6 +118,9 @@ namespace ConsoleApp1
         }
         static void drawLevelThree()
         {
+            //Calling Boat image
+            drawBoat();
+
             currentX = startX;
             currentY = startY;
             goRight();
