@@ -140,9 +140,6 @@ namespace ConsoleApp1
                     break;
 
                 }
-                a = +50;
-                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
-
                 currentX += 50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
             }
@@ -161,8 +158,6 @@ namespace ConsoleApp1
                     a = 0;
                     break;
                 }
-                a = -50;
-                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
                 currentX -= 50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
             }
@@ -181,8 +176,6 @@ namespace ConsoleApp1
                     a = 0;
                     break;
                 }
-                a = +50;
-                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
 
                 currentY += 50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
@@ -202,8 +195,6 @@ namespace ConsoleApp1
                     a = 0;
                     break;
                 }
-                a = -50;
-                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
                 currentY -= 50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
             }
