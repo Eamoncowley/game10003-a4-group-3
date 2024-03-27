@@ -1,5 +1,5 @@
 ﻿// Created by Jonah, Makayla, Eamon, Sudhan and Param
-
+// Test
 using Raylib_cs;
 using System;
 using System.Diagnostics;
@@ -140,8 +140,8 @@ namespace ConsoleApp1
                     break;
 
                 }
-                a = +50;
-                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
+                currentX += 50;
+                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
             }
             return;
         }
@@ -158,8 +158,8 @@ namespace ConsoleApp1
                     a = 0;
                     break;
                 }
-                a = -50;
-                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
+                currentX -= 50;
+                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
             }
             return;
         }
@@ -176,8 +176,9 @@ namespace ConsoleApp1
                     a = 0;
                     break;
                 }
-                a = +50;
-                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
+
+                currentY += 50;
+                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
             }
             return;
         }
@@ -194,8 +195,8 @@ namespace ConsoleApp1
                     a = 0;
                     break;
                 }
-                a = -50;
-                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
+                currentY -= 50;
+                Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
             }
             return;
         }
