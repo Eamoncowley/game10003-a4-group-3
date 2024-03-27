@@ -130,7 +130,6 @@ namespace ConsoleApp1
         {
             while (true) // Go right with path
             {
-<<<<<<< Updated upstream
 
                 currentX = currentX + a;
                 currentTile++;
@@ -143,10 +142,9 @@ namespace ConsoleApp1
                 }
                 a = +50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
-=======
+
                 currentX += 50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
->>>>>>> Stashed changes
             }
             return;
         }
@@ -154,7 +152,6 @@ namespace ConsoleApp1
         {
             while (true) // Go left with path
             {
-<<<<<<< Updated upstream
 
                 currentX = currentX + a;
                 currentTile++;
@@ -166,10 +163,8 @@ namespace ConsoleApp1
                 }
                 a = -50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
-=======
                 currentX -= 50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
->>>>>>> Stashed changes
             }
             return;
         }
@@ -177,7 +172,6 @@ namespace ConsoleApp1
         {
             while (true) // Go down with path
             {
-<<<<<<< Updated upstream
 
                 currentY = currentY + a;
                 currentTile++;
@@ -189,10 +183,9 @@ namespace ConsoleApp1
                 }
                 a = +50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
-=======
+
                 currentY += 50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
->>>>>>> Stashed changes
             }
             return;
         }
@@ -200,7 +193,6 @@ namespace ConsoleApp1
         {
             while (true) // Go down with path
             {
-<<<<<<< Updated upstream
 
                 currentY = currentY + a;
                 currentTile++;
@@ -212,10 +204,8 @@ namespace ConsoleApp1
                 }
                 a = -50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Gray);
-=======
                 currentY -= 50;
                 Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Blue);
->>>>>>> Stashed changes
             }
             return;
         }
