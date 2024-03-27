@@ -80,8 +80,8 @@ namespace ConsoleApp1
             }
 
             
-            Raylib.DrawTexture(drawBoat, -950, -1350, Color.White);
-            
+            Raylib.DrawTexture(drawBoat, 25, 25, Color.White);
+
         }
         //Boat for moving object on path/water
         /*static void drawBoat()
