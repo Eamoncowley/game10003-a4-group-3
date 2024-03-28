@@ -1,5 +1,5 @@
 
-﻿// Created by Jonah, Makayla, Eamon, Sudhan and Param
+// Created by Jonah, Makayla, Eamon, Sudhan and Param
 // Test
 using Raylib_cs;
 using System;
@@ -63,64 +63,63 @@ namespace ConsoleApp1
                 drawLevelOne();
                 UpdateBall();
 
-            //Console.WriteLine("Running game"); // Debug 
-            // Your game code run each frame here
-            if (gameOneCompleted == false)
-            {
-                drawLevelOne();
-            }
-            else if (gameOneCompleted && gameTwoCompleted == false)
-            {
-                drawLevelTwo();
-                UpdateBall();
-            }
-            else if (gameOneCompleted && gameTwoCompleted && gameThreeCompleted == false)
-            {
-                drawLevelThree();
-                UpdateBall();
-            }
-            // Check if all games completed, stop the timer
-            if (gameOneCompleted && gameTwoCompleted && gameThreeCompleted)
-            {
-                timer.Stop();
+                //Console.WriteLine("Running game"); // Debug 
+                // Your game code run each frame here
+                if (gameOneCompleted == false)
+                {
+                    drawLevelOne();
+                }
+                else if (gameOneCompleted && gameTwoCompleted == false)
+                {
+                    drawLevelTwo();
+                    UpdateBall();
+                }
+                else if (gameOneCompleted && gameTwoCompleted && gameThreeCompleted == false)
+                {
+                    drawLevelThree();
+                    UpdateBall();
+                }
+                // Check if all games completed, stop the timer
+                if (gameOneCompleted && gameTwoCompleted && gameThreeCompleted)
+                {
+                    timer.Stop();
+                }
             }
         }
-
-        static void UpdateBall()
-        {
-            Vector2 ballDirection = new Vector2(0, 0);
-
-            if (Raylib.IsKeyDown(KeyboardKey.D))
+            static void UpdateBall()
             {
-                ballDirection = new Vector2(1, 0);
-            }
-            else if (Raylib.IsKeyDown(KeyboardKey.A))
-            {
-                ballDirection = new Vector2(-1, 0);
-            }
-            else if (Raylib.IsKeyDown(KeyboardKey.W))
-            {
-                ballDirection = new Vector2(0, -1);
-            }
-            else if (Raylib.IsKeyDown(KeyboardKey.S))
-            {
-                ballDirection = new Vector2(0, 1);
-            }
+                Vector2 ballDirection = new Vector2(0, 0);
 
-            ballPosition += ballDirection * ballSpeed * Raylib.GetFrameTime();
+                if (Raylib.IsKeyDown(KeyboardKey.D))
+                {
+                    ballDirection = new Vector2(1, 0);
+                }
+                else if (Raylib.IsKeyDown(KeyboardKey.A))
+                {
+                    ballDirection = new Vector2(-1, 0);
+                }
+                else if (Raylib.IsKeyDown(KeyboardKey.W))
+                {
+                    ballDirection = new Vector2(0, -1);
+                }
+                else if (Raylib.IsKeyDown(KeyboardKey.S))
+                {
+                    ballDirection = new Vector2(0, 1);
+                }
 
-            if (ballPosition.X > width)
-                ballPosition.X = 0;
-            else if (ballPosition.X < 0)
-                ballPosition.X = width;
+                ballPosition += ballDirection * ballSpeed * Raylib.GetFrameTime();
 
-            if (ballPosition.Y > height)
-                ballPosition.Y = 0;
-            else if (ballPosition.Y < 0)
-                ballPosition.Y = height;
+                if (ballPosition.X > width)
+                    ballPosition.X = 0;
+                else if (ballPosition.X < 0)
+                    ballPosition.X = width;
 
-            Raylib.DrawCircle((int)ballPosition.X, (int)ballPosition.Y, ballRadius, Color.Yellow);
-        }
+                if (ballPosition.Y > height)
+                    ballPosition.Y = 0;
+                else if (ballPosition.Y < 0)
+                    ballPosition.Y = height;
+
+                Raylib.DrawCircle((int)ballPosition.X, (int)ballPosition.Y, ballRadius, Color.Yellow);
             }
         }
 
