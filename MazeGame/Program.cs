@@ -1,6 +1,11 @@
-﻿using Raylib_cs;
+
+﻿// Created by Jonah, Makayla, Eamon, Sudhan and Param
+// Test
+using Raylib_cs;
 using System;
 using System.Diagnostics;
+//using System.Drawing;
+
 using System.Numerics;
 
 namespace ConsoleApp1
@@ -11,7 +16,6 @@ namespace ConsoleApp1
         const string title = "Maze game created for Mohawk College";
         const int width = 800;
         const int height = 800;
-
         // Ball variables
         const int ballRadius = 20;
         const float ballSpeed = 200f;
@@ -20,6 +24,7 @@ namespace ConsoleApp1
         // Setup drawing
         public static int startX = 400;
         public static int startY = 0;
+        // Setup drawing
         public static int currentX = startX;
         public static int currentY = startY;
         public static int a;
@@ -30,7 +35,6 @@ namespace ConsoleApp1
         public static bool gameOneCompleted = false;
         public static bool gameTwoCompleted = false;
         public static bool gameThreeCompleted = false;
-
         // Timer variables
         static Stopwatch timer = new Stopwatch();
         static TimeSpan elapsedTime;
@@ -46,6 +50,7 @@ namespace ConsoleApp1
                 Raylib.ClearBackground(Color.DarkGreen);
                 Update();
                 DrawTimer();
+                //drawTree();
                 Raylib.EndDrawing();
             }
             Raylib.CloseWindow();
@@ -57,6 +62,12 @@ namespace ConsoleApp1
             {
                 drawLevelOne();
                 UpdateBall();
+
+            //Console.WriteLine("Running game"); // Debug 
+            // Your game code run each frame here
+            if (gameOneCompleted == false)
+            {
+                drawLevelOne();
             }
             else if (gameOneCompleted && gameTwoCompleted == false)
             {
@@ -110,6 +121,8 @@ namespace ConsoleApp1
 
             Raylib.DrawCircle((int)ballPosition.X, (int)ballPosition.Y, ballRadius, Color.Yellow);
         }
+            }
+        }
 
         static void drawLevelOne()
         {
@@ -121,7 +134,6 @@ namespace ConsoleApp1
             goDown();
             drawEnd();
         }
-
         static void drawLevelTwo()
         {
             currentX = startX;
@@ -144,7 +156,6 @@ namespace ConsoleApp1
             goLeft();
             drawEnd();
         }
-
         static void drawLevelThree()
         {
             currentX = startX;
@@ -167,12 +178,10 @@ namespace ConsoleApp1
             goUp();
             drawEnd();
         }
-
         static void drawStart()
         {
             Raylib.DrawRectangle(400, 0, 50, 50, Color.Green);
         }
-
         static void drawEnd()
         {
             Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Red);
