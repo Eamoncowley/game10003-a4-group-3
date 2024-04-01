@@ -1,10 +1,10 @@
-﻿// Created by Jonah, Makayla, Eamon, Sudhan and Param
-// Test
+﻿// Created by Jonah, Makayla, Eamon and Param
+
 using Raylib_cs;
 using System;
 using System.Diagnostics;
-//using System.Drawing;
 using System.Numerics;
+using System.Runtime.CompilerServices;
 
 namespace ConsoleApp1
 {
@@ -39,7 +39,6 @@ namespace ConsoleApp1
                 Raylib.BeginDrawing();
                 Raylib.ClearBackground(Color.DarkGreen);
                 Update();
-                //drawTree();
                 Raylib.EndDrawing();
             }
             Raylib.CloseWindow();
@@ -48,7 +47,6 @@ namespace ConsoleApp1
         static void Update()
         {
 
-            //Console.WriteLine("Running game"); // Debug 
             // Your game code run each frame here
             if (gameOneCompleted == false)
             {
@@ -120,10 +118,12 @@ namespace ConsoleApp1
         }
         static void drawStart()
         {
+            // This is where your character starts, its a green square.
             Raylib.DrawRectangle(400, 0, 50, 50, Color.Green);
         }
         static void drawEnd()
         {
+            // This is where your character ends, its a red square.
             Raylib.DrawRectangle(currentX, currentY, 50, 50, Color.Red);
         }
         static void goRight()
