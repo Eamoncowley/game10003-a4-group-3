@@ -8,12 +8,14 @@ using System.Numerics;
 
 namespace ConsoleApp1
 {
-    //2D Textures/ Images
-    public Texture2D drawBoat;
-    public Texture2D waterPath;
+    
 
     internal class Program
     {
+        //2D Textures/ Images
+        public static Texture2D drawBoat;
+        public static Texture2D waterPath;
+
         // Setup window
         const string title = "Maze game created for Mohawk College";
         const int width = 800;
@@ -33,16 +35,21 @@ namespace ConsoleApp1
         public static bool gameTwoCompleted = false;
         public static bool gameThreeCompleted = false;
 
-        //Adding Images
-        Raylib.LoadTextureFromImage("Boat.png");
-        Texture2D drawBoat = Raylib.LoadImage("../../../../Assets/Boat.png");
-        Raylib.LoadTextureFromImage("Water.png");
-        Texture2D waterPath = Raylib.LoadImage("../../../../Assets/Water.png");
-
         static void Main(string[] args)
         {
             Raylib.InitWindow(width, height, title);
             Raylib.SetTargetFPS(60);
+
+            // Load Textures
+            //Boat
+            Image B = Raylib.LoadImage("../../../../Assets/Boat.png");
+            drawBoat = Raylib.LoadTextureFromImage(B);
+            //Raylib.UnloadImage(B);
+            //Water tile
+            Image W = Raylib.LoadImage("../../../../Assets/Water.png");
+            waterPath = Raylib.LoadTextureFromImage(W);
+            //Raylib.UnloadImage(W);
+
             while (!Raylib.WindowShouldClose())
             {
                 Raylib.BeginDrawing();
@@ -71,17 +78,21 @@ namespace ConsoleApp1
             {
                 drawLevelThree();
             }
+
+            
+            Raylib.DrawTexture(drawBoat, -950, -1350, Color.White);
+
         }
         //Boat for moving object on path/water
-        static void drawBoat()
+        /*static void drawBoat()
         {
             Raylib.DrawTexturePro(Texture2D drawBoat,);
-        }
+        }*/
 
         static void drawLevelOne()
         {
             //Calling Boat image
-            drawBoat();
+            //drawBoat();
 
             currentX = startX;
             currentY = startY;
@@ -94,7 +105,7 @@ namespace ConsoleApp1
         static void drawLevelTwo()
         {
             //Calling Boat image
-            drawBoat();
+            //drawBoat();
 
             currentX = startX;
             currentY = startY;
@@ -119,7 +130,7 @@ namespace ConsoleApp1
         static void drawLevelThree()
         {
             //Calling Boat image
-            drawBoat();
+            //drawBoat();
 
             currentX = startX;
             currentY = startY;
